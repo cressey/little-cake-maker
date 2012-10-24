@@ -7,9 +7,6 @@
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
 
-// Import the non-default scaffolding module.
-@import "blueprint/scaffolding";
-
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -28,62 +25,85 @@ body.bp {
 
 form.bp {
   @include blueprint-form;
-  // You'll probably want to remove the scaffolding once you start styling your site.
-  @include blueprint-scaffolding;
 }
-
-@import "compass/layout/sticky-footer";
-@include sticky-footer(72px, "#layout", "#footer-root", "#footer");
 
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 .two-col {
-  @include container;
-  background-color: #cccccc;
-  #header {
-	  position: relative;
-    @include column(24); }
-  #navi li {
-    @include column(8);
-    margin: 0;
-  }
-  #sidebar {
-    @include column(8);
-    background: black;
-    height: 100px;
-  }
-  #content {
-    @include column(16, true); } 
-  .contact { 
-    @include column(24); }
+	@include container;
+	background-color: $color4;
+	@include box-shadow;
+}
+#header {	
+	@include box-shadow;
+	@include column(24); 
+	position: relative;
+	font: 48px $font-sans;
+    margin-top: 1em;
+	margin-bottom: 0.5em;
+    span.little { font-size: 0.5em; vertical-align: middle}    
+}
+#navi {
+	@include column(24);
+	background-color: $color1;
+	margin: 1.5em 0;
+}
+#navi li {
+	@include column(6);
+	@include clearfix;
+	border: 1px solid $color1;
+	font-family: $font-cursive;
+	text-align: center;
+	padding: 0.5em 0;
+	margin: 0;
+	background-color: $color2;
+	
+}
+#sidebar {
+	@include column(8);
+	background: black;
+	height: 100px;
+}
+#content {
+	@include column(16, true); } 
+.contact { 
+	@include column(24); 	
 }    
 
 #header, #footer {
     background: $color1;
-    }
-
-#header {    
-    font: 48px $font-sans;
-    margin-top: 1.5em;
-    span.little { font-size: 0.5em; vertical-align: middle}
-    }
+	color: $color2;
+}
 
 #footer-root { clear:both }
+@include sticky-footer(72px, "#layout", "#footer-root", "#footer");
 
+/* essential so the ribbon can go over the edge */
 #layout { overflow: visible }
-    
-#header:after {
-  border-bottom: 20px solid;
-  border-left: 20px solid transparent;
-  content: "";
-  left: -20px;
-  position: absolute;
-  top: -20px;
+
+.ribbon {
+	margin-left: -20px;
+	overflow: visible;
+	padding-left: 20px;	
 }
-#header:before {
-  background: none repeat scroll 0 0 gold;
-  content: "";
-  height: 100%;
-  left: -20px;
-  position: absolute;
-  width: 20px;
+
+/* folded in part */    
+.ribbon:before {
+	border-bottom: 20px solid $color2;
+	border-left: 20px solid transparent;
+	content: "";
+	left: 0;
+	position: absolute;
+	top: -20px;
+	z-index: -1;
 }
+/* left of header */
+/*#header:before {
+	@include box-shadow;
+	background-color: $color1;
+	content: "";
+	height: 100%;
+	left: -20px;
+	position: absolute;
+	width: 20px;
+}
+*/

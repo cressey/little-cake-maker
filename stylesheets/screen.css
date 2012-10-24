@@ -57,12 +57,7 @@ a img {
   border: none;
 }
 
-/*
-#E6B78E
-#F8EBDA
-#E7A997
-#D05D5D */
-/* line 20, ../sass/screen.scss */
+/* line 17, ../sass/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -445,56 +440,124 @@ form.bp textarea {
   width: 390px;
   height: 250px;
 }
-/* line 39, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
+
+/* line 31, ../sass/screen.scss */
+.two-col {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  background-color: #e7a997;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
 }
-/* line 42, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #dddddd;
+
+/* line 36, ../sass/screen.scss */
+#header {
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  position: relative;
+  font: 48px "Titillium Web", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
 }
-/* line 45, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp .colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #dddddd;
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #header {
+  overflow-x: hidden;
 }
-/* line 47, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp hr {
-  background: #dddddd;
-  color: #dddddd;
+/* line 43, ../sass/screen.scss */
+#header span.little {
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+/* line 45, ../sass/screen.scss */
+#navi {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  background-color: #7b4c4c;
+  margin: 1.5em 0;
+}
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #navi {
+  overflow-x: hidden;
+}
+
+/* line 50, ../sass/screen.scss */
+#navi li {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  overflow: hidden;
+  *zoom: 1;
+  border: 1px solid #7b4c4c;
+  font-family: "Leckerli One", cursive;
+  text-align: center;
+  padding: 0.5em 0;
+  margin: 0;
+  background-color: #e6b78e;
+}
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #navi li {
+  overflow-x: hidden;
+}
+
+/* line 61, ../sass/screen.scss */
+#sidebar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+  background: black;
+  height: 100px;
+}
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #sidebar {
+  overflow-x: hidden;
+}
+
+/* line 66, ../sass/screen.scss */
+#content {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 630px;
+}
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content {
+  overflow-x: hidden;
+}
+
+/* line 68, ../sass/screen.scss */
+.contact {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .contact {
+  overflow-x: hidden;
+}
+
+/* line 72, ../sass/screen.scss */
+#header, #footer {
+  background: #7b4c4c;
+  color: #e6b78e;
+}
+
+/* line 77, ../sass/screen.scss */
+#footer-root {
   clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-}
-/* line 49, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-  background: white;
-  color: white;
-  visibility: hidden;
-}
-/* line 51, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-form.bp form.inline {
-  line-height: 3;
-}
-/* line 6, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp form.inline p {
-  margin-bottom: 0;
 }
 
 /* line 10, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
@@ -522,116 +585,39 @@ html, body {
   height: 72px;
 }
 
-/* line 39, ../sass/screen.scss */
-.two-col {
-  width: 950px;
-  margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
-  background-color: #cccccc;
-}
-/* line 42, ../sass/screen.scss */
-.two-col #header {
-  position: relative;
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #header {
-  overflow-x: hidden;
-}
-/* line 45, ../sass/screen.scss */
-.two-col #navi li {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-  margin: 0;
-}
-/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #navi li {
-  overflow-x: hidden;
-}
-/* line 49, ../sass/screen.scss */
-.two-col #sidebar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
-  background: black;
-  height: 100px;
-}
-/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #sidebar {
-  overflow-x: hidden;
-}
-/* line 54, ../sass/screen.scss */
-.two-col #content {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 630px;
-}
-/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col #content {
-  overflow-x: hidden;
-}
-/* line 56, ../sass/screen.scss */
-.two-col .contact {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 147, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html .two-col .contact {
-  overflow-x: hidden;
-}
-
-/* line 60, ../sass/screen.scss */
-#header, #footer {
-  background: #7b4c4c;
-}
-
-/* line 64, ../sass/screen.scss */
-#header {
-  font: 48px "Titillium Web", sans-serif;
-  margin-top: 1.5em;
-}
-/* line 67, ../sass/screen.scss */
-#header span.little {
-  font-size: 0.5em;
-  vertical-align: middle;
-}
-
-/* line 70, ../sass/screen.scss */
-#footer-root {
-  clear: both;
-}
-
-/* line 72, ../sass/screen.scss */
+/* essential so the ribbon can go over the edge */
+/* line 81, ../sass/screen.scss */
 #layout {
   overflow: visible;
 }
 
-/* line 74, ../sass/screen.scss */
-#header:after {
-  border-bottom: 20px solid;
-  border-left: 20px solid transparent;
-  content: "";
-  left: -20px;
-  position: absolute;
-  top: -20px;
+/* line 83, ../sass/screen.scss */
+.ribbon {
+  margin-left: -20px;
+  overflow: visible;
+  padding-left: 20px;
 }
 
-/* line 82, ../sass/screen.scss */
-#header:before {
-  background: none repeat scroll 0 0 gold;
+/* folded in part */
+/* line 90, ../sass/screen.scss */
+.ribbon:before {
+  border-bottom: 20px solid #e6b78e;
+  border-left: 20px solid transparent;
   content: "";
-  height: 100%;
-  left: -20px;
+  left: 0;
   position: absolute;
-  width: 20px;
+  top: -20px;
+  z-index: -1;
 }
+
+/* left of header */
+/*#header:before {
+	@include box-shadow;
+	background-color: $color1;
+	content: "";
+	height: 100%;
+	left: -20px;
+	position: absolute;
+	width: 20px;
+}
+*/
