@@ -16,15 +16,12 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
-    <div class="two-col">
-        <div id='header' class="ribbon">
-            <h1>The <span class="little">Little</span> Cake Maker</h1>
-        </div>
-        <div class="contact">
-            <p>Lovely cakes for all</p>
-            <a class="phone" href="tel:01234567890">Call us! Tel: 01234567890</a>
-            <a class="email" href="mailto:someguy@gmail.com">Email us: someguy@gmail.com</a>
-        </div>
+    <div class="container">
+		<div id='header' class="ribbon">
+			<h1>The <span class="little">Little</span> Cake Maker</h1>
+		</div>
+        
+		<p>Lovely cakes for all</p>                    
         
         <div class="nuff-stars"></div>
         
@@ -41,3 +38,4 @@
                 </li>
             </ul>
         </div>
+	</div>

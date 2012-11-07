@@ -6,17 +6,16 @@
 <?php
     include("head.php");
 ?>
-<div id="layout">
-    <div id="content">
+<div id="content" class="container">
     <?php
         // ensure that the page var is set
         include($page);
     ?>
-    </div>
-    
 </div>
-<div id='footer' class="two-col">
-    This is the footer.
+    
+<div id='footer' class="container">    
+    Call us! <a class="phone" href="tel:01234567890">Tel: 01234567890</a>
+	Email us: <a class="email" href="mailto:someguy@gmail.com">someguy@gmail.com</a>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
