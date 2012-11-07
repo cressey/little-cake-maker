@@ -11,11 +11,12 @@ $blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $b
 
 $font-cursive: 'Leckerli One', cursive;
 $font-sans: 'Titillium Web', sans-serif;
-$color1: #7B4C4C;
-$color2: #E6B78E;
-$color3: #F8EBDA;
-$color4: #E7A997;
-$color5: #D05D5D;
+$color1: #f9d195; // orange
+$color2: #FFF1DB; // beige
+$color3: #62483D; // dark brown
+$color4: #FEFDFD; // off white
+//$color5: #D05D5D;
+
 
 @import "compass/layout/sticky-footer";
 @import "compass/css3";

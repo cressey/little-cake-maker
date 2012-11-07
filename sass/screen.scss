@@ -7,6 +7,8 @@
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
 
+@import "body";
+
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -19,36 +21,60 @@ body.bp {
   @include blueprint-utilities;
   @include blueprint-debug;
   @include blueprint-interaction;
-  // Remove the scaffolding when you're ready to start doing visual design.
-  // Or leave it in if you're happy with how blueprint looks out-of-the-box
 }
 
 form.bp {
   @include blueprint-form;
 }
 
+body {
+	background: $color1;
+}
+
 // Page layout can be done using mixins applied to your semantic classes and IDs:
 .two-col {
 	@include container;
-	background-color: $color4;
-	@include box-shadow;
+	.nuff-stars{
+		@include column(24);
+	}
+	#navi {
+		@include column(24);
+	}
+	#navi li {
+		@include column(6);
+	}
 }
 #header {	
-	@include box-shadow;
-	@include column(24); 
+	@include box-shadow; 
 	position: relative;
+	width: $blueprint-container-size * 0.75;
 	font: 48px $font-sans;
-    margin-top: 1em;
-	margin-bottom: 0.5em;
-    span.little { font-size: 0.5em; vertical-align: middle}    
+	margin: 1em auto 0.5em;
+    span.little { font-size: 0.5em; vertical-align: middle};
+	text-align: center;
 }
+a.phone:before {
+	content: "\260E";
+	font-size: 1.3em;
+	line-height: 0;
+}
+a.email:before {
+	content: "\2709";
+	font-size: 1.3em;
+	line-height: 0;
+}
+
+.nuff-stars {
+	@include background(image-url("stahculture.png"));
+	height: 15px;
+}
+
+
 #navi {
-	@include column(24);
 	background-color: $color1;
-	margin: 1.5em 0;
+	margin: 1.5em auto;
 }
 #navi li {
-	@include column(6);
 	@include clearfix;
 	border: 1px solid $color1;
 	font-family: $font-cursive;
@@ -58,13 +84,10 @@ form.bp {
 	background-color: $color2;
 	
 }
-#sidebar {
-	@include column(8);
-	background: black;
-	height: 100px;
-}
 #content {
-	@include column(16, true); } 
+	//@include column(24); 
+	
+} 
 .contact { 
 	@include column(24); 	
 }    
@@ -73,37 +96,3 @@ form.bp {
     background: $color1;
 	color: $color2;
 }
-
-#footer-root { clear:both }
-@include sticky-footer(72px, "#layout", "#footer-root", "#footer");
-
-/* essential so the ribbon can go over the edge */
-#layout { overflow: visible }
-
-.ribbon {
-	margin-left: -20px;
-	overflow: visible;
-	padding-left: 20px;	
-}
-
-/* folded in part */    
-.ribbon:before {
-	border-bottom: 20px solid $color2;
-	border-left: 20px solid transparent;
-	content: "";
-	left: 0;
-	position: absolute;
-	top: -20px;
-	z-index: -1;
-}
-/* left of header */
-/*#header:before {
-	@include box-shadow;
-	background-color: $color1;
-	content: "";
-	height: 100%;
-	left: -20px;
-	position: absolute;
-	width: 20px;
-}
-*/

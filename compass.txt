@@ -1,0 +1,2 @@
+inside the dir, run:
+ $ compass watch .
