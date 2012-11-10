@@ -1,0 +1,130 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// To generate css equivalent to the blueprint css but with your
+// configuration applied, uncomment:
+// @include blueprint
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+}
+
+form.bp {
+  @include blueprint-form;
+}
+
+body {
+	background: $color1;
+}
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+.container {
+	@include container;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.container div, .container p {
+	margin: 1em auto;
+}
+
+.nuff-stars, #navi { 
+	@include column(24); 	
+}
+
+#navi {
+	@include column(24);
+}
+
+#navi li {
+	@include column(6);
+}
+
+#header {	
+	@include box-shadow; 
+	position: relative;
+	width: $blueprint-container-size * 0.75;
+	font: 48px $font-sans;
+	margin: 1em auto;
+    span.little { font-size: 0.5em; vertical-align: middle};
+	text-align: center;
+}
+
+a.phone:before {
+	content: "\260E";
+	font-size: 1.3em;
+	line-height: 0;
+}
+a.email:before {
+	content: "\2709";
+	font-size: 1.3em;
+	line-height: 0;
+}
+
+.nuff-stars {
+	@include background(image-url("stahculture.png"));
+	height: 15px;
+}
+
+#navi {
+	background-color: $color1;
+}
+
+#navi li {
+	@include clearfix;
+	border: 1px solid $color1;
+	font-family: $font-cursive;
+	text-align: center;
+	padding: 0.5em 0;
+	margin: 0;
+	background-color: $color2;
+	
+}
+
+#header, #footer {
+    background: $color3;
+	color: $color2;
+}
+
+#content {
+    @include box-shadow(inset 0 0 0 5px $color4);
+    background-color: $color2;
+}
+
+h2 {
+    font: 32px $font-sans;
+    color: $color3;
+	text-align: center;
+}
+
+.post {
+	padding: 0 1em;
+}
+
+#slider {    
+    padding: 0em 3em;
+}
+
+#slider img {    
+    width: 100%
+}
+
+/* Currently does not exist 
+#rotatingImage {
+    @include background(image-url("sprinkles.jpg"),
+        radial-gradient(#fff, #FFF1DB 300px));
+    
+}
+*/
