@@ -6,8 +6,8 @@ if (!is_admin()) {
 
 function load_jquery() 
 {
-	wp_deregister_script('jquery');
-	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, null);
+//  	wp_deregister_script('jquery');
+//  	wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js", false, null);
 	wp_enqueue_script('jquery');	
 }
 
@@ -25,9 +25,10 @@ remove_action('wp_head', 'wp_generator');
 function enqueue_scripts() 
 {  
 	/** REGISTER HTML5 Shim **/  
-	wp_register_script( 'html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', false );  
-	wp_enqueue_script( 'html5-shim' );  
-	/** REGISTER HTML5 OtherScript.js **/  
+// Probably a good idea but not now.
+// 	wp_register_script( 'html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', false );  
+// 	wp_enqueue_script( 'html5-shim' );  
+	
 	wp_register_script( 'index-js', THEME_DIR . '/js/index.js', array( 'jquery' ), '1', false );  
 	wp_enqueue_script( 'index-js' );  
 }  
