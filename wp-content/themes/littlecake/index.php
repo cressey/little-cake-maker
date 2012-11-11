@@ -11,14 +11,6 @@ get_header();
 </div>
 <?php endwhile; endif; ?>
 
-
-<div id="nonJsBanner">
-    <img src="images/sprinkles.jpg" alt="The Little Cake Maker">
-</div>
-<div id="slider" class="pix_diapo banner">
-    <img id="imgChanger" src="images/sprinkles.jpg" alt="The Little Cake Maker" />    
-</div>
-
 <?php
 get_footer();
 ?>

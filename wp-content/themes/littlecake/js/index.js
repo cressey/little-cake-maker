@@ -29,7 +29,7 @@
 
 	$(document).ready(function () {
 		if (screen.width>854) {
-			load_banner();
+			//load_banner();
 		}	
 	});	
 	
