@@ -10,8 +10,9 @@
 	<meta name="description" content="Keywords">  
 	<meta name="author" content="Name">  
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
-	<!--=== LINK TAGS ===-->  
+	<!--=== LINK TAGS ===  
 	<link href='http://fonts.googleapis.com/css?family=Leckerli+One|Titillium+Web:400,900' rel='stylesheet' type='text/css'>
+    -->
 	<link rel="shortcut icon" href="<?php echo THEME_DIR; ?>/path/favicon.ico" />  
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />  
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />  
@@ -33,18 +34,7 @@
 	
 	<div class="nuff-stars"></div>
 	
-	<div id='navi'>
-		<ul>
-			<li>
-				<a href='#'>Nav #1</a>
-			</li>
-			<li>
-				<a href='#'>Nav #2</a>
-			</li>
-			<li>
-				<a href='#'>Nav #3</a>
-			</li>
-		</ul>
-	</div>
+	<?php get_sidebar(); ?>
+    
 </div>
 <div id="content" class="container">

@@ -4,11 +4,6 @@
 	Email us: <a class="email" href="mailto:someguy@gmail.com">someguy@gmail.com</a>
 </div>
 
-<!--
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
--->
-
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--
 <script>

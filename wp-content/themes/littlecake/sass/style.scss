@@ -44,14 +44,6 @@ body {
 	@include column(24); 	
 }
 
-#navi {
-	@include column(24);
-}
-
-#navi li {
-	@include column(6);
-}
-
 #header {	
 	@include box-shadow; 
 	position: relative;
@@ -83,14 +75,22 @@ a.email:before {
 }
 
 #navi li {
+    @include column(6);
 	@include clearfix;
-	border: 1px solid $color1;
+	//border: 1px solid $color1;
 	font-family: $font-cursive;
 	text-align: center;
-	padding: 0.5em 0;
-	margin: 0;
+	//padding: 0.5em 0;
+
 	background-color: $color2;
-	
+	color: $color3;
+    //@include background-image(radial-gradient(45px 24px, $color2 -30px, $color1 100px));
+
+}
+
+#navi a:hover li {
+	//color: $color2;
+    //@include background-image(radial-gradient(45px 24px, $color3 -30px, $color1 100px));
 }
 
 #header, #footer {
